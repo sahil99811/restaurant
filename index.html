@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Order System</title>
+    <style >
+        body {
+    font-family: Arial, sans-serif;
+        }
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:5px;
+}
+
+.order-card {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.order-card h2 {
+    margin: 0;
+}
+
+.order-card button {
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.order-card button:hover {
+    background-color: darkred;
+}
+    </style>
+</head>
+<body>
+    <h1>Restaurant Order Management System</h1>
+    <div class="container">
+        
+        <div>
+            <label for="dishName">Dish Name:</label>
+            <input type="text" id="dishName">
+        </div>
+        <div>
+            <label for="price">Price:</label>
+            <input type="text" id="price">
+        </div>
+        <div>
+            <select id="tableNo">
+                <option value="table1">Table1</option>
+                <option value="table2">Table2</option>
+                <option value="table3">Table3</option>
+            </select>
+            <!-- <label for="tableNo">Table Number:</label>
+            <input type="text" id="tableNo"> -->
+        </div>
+        <button onclick="addOrder()">Add Order</button>
+    </div>
+
+    <div class="container">
+        <div id="orderList"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="main.js"></script>
+    </script>
+</body>
+</html>
